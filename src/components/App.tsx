@@ -1,9 +1,10 @@
-import "@styles/App.sass";
+import "@styles/App.scss";
+import { StepTracker } from "./StepTracker";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World!</p>
+      <StepTracker />
     </div>
   );
 }
