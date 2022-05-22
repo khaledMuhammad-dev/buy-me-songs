@@ -1,5 +1,9 @@
+@use "../styles/vars" as *;
+
 .App {
   text-align: center;
+  background-color: $darkNavy;
+  min-height: 100vh;
 }
 
 .App-logo {
