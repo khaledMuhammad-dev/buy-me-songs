@@ -1,0 +1,52 @@
+@use "../styles/vars" as *;
+
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 25px;
+  background: #0e1e30;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 180ms ease;
+  border: 1px solid transparent;
+
+  &.selected {
+    border: 1px solid $pincky;
+  }
+
+  &.selected .cirlce {
+    background: #fb324f;
+    animation: rotate 180ms ease;
+  }
+}
+
+.cirlce {
+  $size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  background: $darkNavy;
+  border-radius: 100%;
+  color: white;
+  font-size: 0.75rem;
+  transition: all 180ms ease;
+}
+
+
+.selected_filter {
+    background: $pincky !important;
+    color: white !important;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}

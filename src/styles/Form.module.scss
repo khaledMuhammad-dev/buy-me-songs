@@ -1,0 +1,64 @@
+@use "../styles/vars" as *;
+
+.red {
+  color: red;
+}
+
+.input_wrapper {
+  position: relative;
+  input {
+    font-size: 14px;
+    height: 56px;
+    padding: 0 1rem;
+    background-color: transparent;
+    outline: none;
+    color: $textColor;
+    width: 100%;
+    border: none;
+  }
+
+  label {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    background: $lightNavy;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: all 180ms ease;
+    color: $textColor;
+    text-transform: capitalize;
+  }
+
+  input:focus + label,
+  label.active {
+    top: 0;
+    font-size: 12px;
+  }
+}
+
+
+.helper {
+    color: rgba(255, 0, 0, 0.75);
+    text-align: left;
+    font-size: 12px;
+}
+
+.danger {
+    border: 1px solid rgba(255, 0, 0, 0.75);
+}
+.color,
+.danger {
+    border-radius: 4px;
+    transition: all 180ms ease;
+}
+
+.danger label {
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.color {
+    border: 1px solid $textColor;
+    overflow: hidden;
+}

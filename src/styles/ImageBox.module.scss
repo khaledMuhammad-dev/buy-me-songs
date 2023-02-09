@@ -1,0 +1,62 @@
+@use "../styles/vars" as *;
+
+.box {
+  border: 1px solid transparent;
+  position: relative;
+  transform: translate(0, -0);
+  transition: all ease 180ms;
+  // border: 1px solid red;
+  padding: 1px;
+  overflow: hidden;
+
+  img {
+    border: 6px solid $darkNavy;
+  }
+}
+
+.selected {
+  border: 1px solid $pincky;
+}
+
+.light {
+  content: "";
+  position: absolute;
+  left: 150%;
+  top: 0;
+  width: 85%;
+  height: calc(100% + 10px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    white 0%,
+    rgba(255, 0, 0, 0) 100%
+  );
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.check_icon {
+  $size: 18px;
+
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  width: $size;
+  height: $size;
+  background: $pincky;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  pointer-events: none;
+  
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.checked {
+    visibility: visible;
+    opacity: 1;
+}
